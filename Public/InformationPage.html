@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width-device-with, initial-scale-1.0" name="viewport">
+    <link rel="stylesheet" href="css/Information.css" media="screen"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="script/GetOnThingspeak.js"></script>
+    <title>Informácie</title>
+    <script src="script/Articles.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="split left">
+    <ul class="menu">
+        <li class="li"><a onclick="a()">Meracia stanica</a></li>
+        <li class="li"><a onclick="b()">LED dióda</a></li>
+        <li class="li"><a onclick="c()">Tlačidlo</a></li>
+        <li class="li"><a onclick="d()">Schéma zapojenia</a></li>
+    </ul>
+
+
+</div>
+
+<div class="split right">
+    <section class="topnav">
+        <div class="wrapper">
+            <a href="HomePge.html" class="button">
+                <div  class="icon">
+                    <i class="fa fa-home"></i>
+                </div>
+                <span>Domov</span>
+            </a>
+            <a href="InformationPage.html" class="button">
+                <div class="icon">
+                    <i class="fa fa-info"></i>
+                </div>
+                <span>Informácie</span>
+            </a>
+            <a href="ContactPage.html" class="button">
+                <div class="icon">
+                    <i class="fa fa-phone"></i>
+                </div>
+                <span>Kontakt</span>
+            </a>
+
+        </div>
+    </section>
+    <section class="sekciaDva">
+
+
+<article id="article"></article>
+
+
+
+
+    </section>
+    <footer>
+        <!--<time id="time"></time>
+        -->
+        <script>
+            currentDate();
+            a();
+        </script>
+    </footer>
+</div>
+<script>
+
+    a();
+</script>
+
+</body>
+
+</html>

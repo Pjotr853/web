@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width-device-with, initial-scale-1.0" name="viewport">
+    <title>Domov</title>
+    <script src="script/GetOnThingspeak.js"></script>
+    <link rel="stylesheet"
+          href="css/Home.css"
+          media="screen"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+<section class="topnav">
+    <div class="wrapper">
+        <a href="HomePge.html" class="button">
+            <div  class="icon">
+                <i class="fa fa-home"></i>
+            </div>
+            <span>Domov</span>
+        </a>
+        <a href="InformationPage.html" class="button">
+            <div class="icon">
+                <i class="fa fa-info"></i>
+            </div>
+            <span>Informácie</span>
+        </a>
+        <a href="ContactPage.html" class="button">
+            <div class="icon">
+                <i class="fa fa-phone"></i>
+            </div>
+            <span>Kontakt</span>
+        </a>
+
+    </div>
+</section>
+
+<div id="myPlot" style="width:100%;max-width:700px"></div>
+
+
+<section class="sekciaDva">
+    <h1 class="nadpis">Meracia stanica FVT TUKE</h1>
+
+    <h2 style="padding-left: 15px">Aktuálne podmienky</h2>
+    <p>
+       <div class="time" id="aktualizovane"></div>
+       <div class="hodnoty" id="teplota"></div>
+       <div class="hodnoty" id="tlak"></div>
+       <div class="hodnoty" id="vlhkost"></div>
+       <div class="hodnoty" id="svietivost"></div>
+   </p>
+
+       <p>
+          <canvas id="myChart" style="width:100%;max-width:600px" class="graf" ></canvas>
+      <div class="buttny">
+          <a onclick="updateGraph(1)" class="button1">Teplota</a>
+          <a onclick="updateGraph(2)" class="button1" >Tlak</a>
+          <a onclick="updateGraph(3)" class="button1" >Vlhkoť</a>
+          <a onclick="updateGraph(4)" class="button1" >Intenzita osvetlenia</a>
+      </div>
+      </p>
+
+       <img src="fig/metrostanica.png" class="imageStation">
+
+    <script>
+      let chart=new Chart(document.getElementById('myChart'));
+      updateGraph(1);
+      posldneMeranie();
+    </script>
+
+
+
+</section>
+   </body>
+   <footer>
+       <!--<time id="time"></time>
+        -->
+       <script>
+           currentDate();
+       </script>
+   </footer>
+   </html>
